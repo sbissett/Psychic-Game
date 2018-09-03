@@ -1,4 +1,4 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en-us">
   <head>
     <meta charset="UTF-8">
@@ -40,25 +40,29 @@
     var wins = 0;
     var losses = 0;
     var guessesLeft = (id = guessesSofar -9);
-    var guessesSofar = ();
+    var guessesSofar = (0);
 
-    // This functdion is run whenver the user presses a key
+    // This function is run whenver the user presses a key
     
     document.onkeyup = function (event) {
 
-        // Determines which key was pressed.
+        // Determines which key was pressed.S
 
         var guessesSofar = event.key;
 
     var computerChoices = computerChoices[Math.floor(Math.random() * computerChoices.length)];
 
-    // only run the following code if the suer presses the computer number
-
+    // only run the following code if the user presses the computer number
 
     
     }
 
+    //creating a variable to hold our new html. Out html now keeps track fo the user and computer guesses, wins/losses and counts
+
+    "<p> wins: " + wins "</p>" +
+    "<p> losses: " + computerChoices + "</p>;
     
+
 
 
 </script>        
