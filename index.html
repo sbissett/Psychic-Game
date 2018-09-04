@@ -40,8 +40,7 @@
     var wins = 0;
     var losses = 0;
     var userguess = 8;
-    var guessesSofar = (0);
-
+    
         var computerChoice = alphabet[Math.floor(Math.randon() * alphabet.length)];
 
         console.log(computerChoice)  
@@ -50,7 +49,7 @@
     
     document.onkeyup = function (event) {
 
-        // Determines which key was pressed.S
+        // Determines which key was pressed
 
         var userguess = event.key;
 
@@ -59,13 +58,20 @@
 
         }else{
 
-        if(userguesses = 0) {
+        userguesses--; 
 
-            }
-        
         }
 
+        if (userguesses === 0) 
+        {
+            lossess++
 
+        }
+        
+    
+    document.getElementById('wins').innerHTML = "Wins: " + wins;
+    documnet.getElementById('losses').innerHTML = "losses: " + losses;
+    document.getElementByID('userguesses').innerHTML = "userGuesses left; " + guesses left;
 
     // only run the following code if the user presses the computer number
 
