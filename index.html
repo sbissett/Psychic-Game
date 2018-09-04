@@ -12,7 +12,9 @@
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-<!--you'll have to link game.js here with an src --> 
+<!--Game.js link -you'll have to link game.js here with an src --> 
+
+<script src="game.js"></script>
 
 </head>
   <body>
@@ -20,8 +22,13 @@
     <div id="psychic game">
         </div>
 
+    <div class="psychicContaner">   
+          <H1>The Psychic Game</H1>
+          <div class="row"
+            <div class="col-md-4"> </div>
+            <div class="col-md-8"></div>
 
-        <H1>The Psychic Game</H1>
+          </div>
         
         <br>
 
@@ -29,54 +36,7 @@
        
         <br>
     
-        <script type="text/javaScript">
-    
-    //create an array that lists out all the options a-z
-    
-    var alphabet = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","r","s","t","u","v","w","x","y","z"];
-
-    // creat variable s to hold the number of wins, losses
-
-    var wins = 0;
-    var losses = 0;
-    var userguess = 8;
-    
-        var computerChoice = alphabet[Math.floor(Math.randon() * alphabet.length)];
-
-        console.log(computerChoice)  
-
-    // This function is run whenver the user presses a key
-    
-    document.onkeyup = function (event) {
-
-        // Determines which key was pressed
-
-        var userguess = event.key;
-
-        if(userguess = computerChoice) {
-            wins++;
-
-        }else{
-
-        userguesses--; 
-
-        }
-
-        if (userguesses === 0) 
-        {
-            lossess++
-
-        }
-        
-    
-    document.getElementById('wins').innerHTML = "Wins: " + wins;
-    documnet.getElementById('losses').innerHTML = "losses: " + losses;
-    document.getElementByID('userguesses').innerHTML = "userGuesses left; " + guesses left;
-
-    // only run the following code if the user presses the computer number
-
-    
-    }
+    </div>    
 
     //creating a variable to hold our new html. Out html now keeps track fo the user and computer guesses, wins/losses and counts
 
