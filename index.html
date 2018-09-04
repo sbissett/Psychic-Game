@@ -33,14 +33,18 @@
     
     //create an array that lists out all the options a-z
     
-    var computerChoices = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","r","s","t","u","v","w","x","y","z"];
+    var alphabet = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","r","s","t","u","v","w","x","y","z"];
 
     // creat variable s to hold the number of wins, losses
 
     var wins = 0;
     var losses = 0;
-    var guessesLeft = (id = guessesSofar -9);
+    var userguess = 8;
     var guessesSofar = (0);
+
+        var computerChoice = alphabet[Math.floor(Math.randon() * alphabet.length)];
+
+        console.log(computerChoice)  
 
     // This function is run whenver the user presses a key
     
@@ -48,9 +52,20 @@
 
         // Determines which key was pressed.S
 
-        var guessesSofar = event.key;
+        var userguess = event.key;
 
-    var computerChoices = computerChoices[Math.floor(Math.random() * computerChoices.length)];
+        if(userguess = computerChoice) {
+            wins++;
+
+        }else{
+
+        if(userguesses = 0) {
+
+            }
+        
+        }
+
+
 
     // only run the following code if the user presses the computer number
 
