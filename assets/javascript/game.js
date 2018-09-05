@@ -1,8 +1,3 @@
-    
-function yourGuess()
-
-{
-
 //create an array that lists out all the options a-z
 
 var alphabet = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","r","s","t","u","v","w","x","y","z"];
@@ -11,10 +6,10 @@ var alphabet = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p",
 
 var wins = 0;
 var losses = 0;
-var userguess = 8;
+var guess = 8;
 var gameOver = false;
 
-    var computerChoice = alphabet[Math.floor(Math.randon() * alphabet.length)];
+    var computerChoice = alphabet[Math.floor(Math.random() * alphabet.length)];
 
     console.log(computerChoice)  
 
@@ -31,20 +26,22 @@ document.onkeyup = function (event) {
 
     }else{
 
-    userguesses--; 
+        userguess--; 
 
     }
 
-    if (userguesses === 0) 
+    if (userguess === 0) 
     {
-        lossess++
+        losses++
 
     }
-}
+
     
     document.getElementById('wins').innerHTML = "Wins: " + wins;
     documnet.getElementById('losses').innerHTML = "losses: " + losses;
-    document.getElementByID('userguesses').innerHTML = "userGuesses left; " + guesses left;
+    document.getElementByID('userguess').innerHTML = "userguess left: " + guess;
+
 }
+
 
 
