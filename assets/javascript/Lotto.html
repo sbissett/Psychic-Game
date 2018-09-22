@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -39,12 +40,43 @@
       $("#random-button").on("click", function() {
 
         // ... we generate a random number
-        var random = Math.floor(Math.random() * 1000) + 1;
+        var random = Math.floor(Math.random() * 9) + 1;
 
         // ... and then dump the random number into our random-number div.
         $("#random-number").text(random);
+
+
+        var randomNumbers = [];
+         
+        for (x = 0; x < 9; x++) { 
+
+            var random = Math.floor(Math.random()*10);
+            randomNumbers [x]= random;
+            console.log(random);
+            console.log(randomNumbers);
+
+         }
+         var newText =$('p')
+         .append(randomNumbers.join());
+
+         //  |5|6|4|9|3|2|1| 
+            // .join takes it and combines into a string like "5649321"
+
+
+         $("#random-number").preppend(newText);
 
       });
 
     });
 
+  </script>
+
+</body>
+</html>
+  </script>
+
+</body>
+</html>
+
+
+ 

@@ -8,7 +8,7 @@ var wins = 0;
 var losses = 0;
 var guess = 8;
 var gameOver = false;
-
+var pastGuesses = [];
 var computerChoice = alphabet[Math.floor(Math.random() * alphabet.length)];
 
 console.log("Welcome Stephen: " + wins);
@@ -39,14 +39,37 @@ document.onkeyup = function (event) {
 
         document.getElementById('wins').innerHTML = wins;
 
-    } else {
+
+
+    } 
+    else{ 
+
+        var alreadyGuesses = false;
+        for (var i=0; i < pastGuesses.length; i++){
+
+            if (userguess === pastGuesses[i]){
+                alreadyGuesses=true;
+            } 
+            console.log(alreadyGuesses);          
+        }
         console.log("Fail", guess) 
         
-        guess--;
+        if (!alreadyGuesses) {
+            guess--;
+            pastGuesses.push(userguess);
+        }
+        else{
+            
+        }
+       
+        // dispaly letters that have been guessed.
+        // reset the game when the game is won or lost
+    }
 
-         }
-
-    if (guess === 0) {
+    console.log(pastGuesses);
+`           `
+    if (guess<1){
+        guess=0;
         console.log('You loose')
         losses++;
 
